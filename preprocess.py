@@ -4,6 +4,16 @@ import os
 import json
 from sklearn.utils import shuffle
 from tqdm import tqdm_notebook as tqdm
+from glob import glob
+from PIL import Image
+import pickle
+from tensorflow.keras.applications import efficientnet as efn 
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from PIL import Image
+import os, os.path
+import pandas as pd
 
 
 annotation_file = '/content/annotations/captions_train2014.json'
